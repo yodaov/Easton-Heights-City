@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Easton Heights City — battle royale</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header class="bar">
+    <h1>Easton Heights City <span>battle royale</span></h1>
+    <p class="sub">In this game you can choose as many people as you like and they will battle to death! Pick a name and traits, then watch the chaos.</p>
+  </header>
+
+  <main>
+    <section id="setup">
+      <div class="row">
+        <button id="btnAdd" class="primary">+ Add character</button>
+        <div class="spacer"></div>
+        <div class="loader">
+          <button id="btnLoadDefault">Load packs/packs.json</button>
+          <input type="file" id="fileInput" accept=".json" multiple/>
+          <button id="btnLoadFiles">Load selected JSON(s)</button>
+        </div>
+      </div>
+      <div id="party"></div>
+      <div class="row end">
+        <button id="btnPlay" class="accent">Play ▶</button>
+      </div>
+    </section>
+
+    <section id="play" class="hidden">
+      <div class="row">
+        <button id="btnBack">← Back to party</button>
+        <div class="spacer"></div>
+        <div id="stats">Alive: <span id="aliveCount">0</span> | Dead: <span id="deadCount">0</span></div>
+      </div>
+      <div id="feed"></div>
+      <div class="row end">
+        <button id="btnPrev" title="View previous">« Prev</button>
+        <button id="btnNext" class="accent">Next event »</button>
+        <label class="auto"><input type="checkbox" id="autoPlay"/> Auto-play</label>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bar foot">
+    <small>HTML-only prototype. Packs are user-provided JSONs.</small>
+  </footer>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
